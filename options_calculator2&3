@@ -2,8 +2,8 @@
 
 #arraytotal = int(input('Total value of the array '))
 #arrayunits = int(input('Number of numbers within the array '))
-arraytotal = 17
-arrayunits = 2
+arraytotal = 13
+arrayunits = 3
 
 firstnumber = list(range(1,10))
 if arrayunits == 2:
@@ -17,16 +17,13 @@ if arrayunits == 2:
         #solutions = [arraytotal]
 elif arrayunits == 3:
     for a1 in firstnumber:
-        secondnumber = list(range(a1,10))
-        secondnumber.remove(a1)
+        secondnumber = list(range(a1+1,10))
         for a2 in secondnumber:
-            thirdnumber = list(range(a2,10))
-            thirdnumber.remove(a2)
+            thirdnumber = list(range(a2+1,10))
             for a3 in thirdnumber:
                 potential =([a1,a2,a3])
                 if sum(potential) == arraytotal:
                     print(potential)
-        #solutions = [arraytotal]
 else:
     solutions = 'Not a 2 or 3 length array'
     print(solutions)

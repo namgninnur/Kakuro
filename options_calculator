@@ -8,33 +8,92 @@ arrayunits = 8
 
 #arraytotal = int(input('Total value of the array '))
 #arrayunits = int(input('Number of numbers within the array '))
-arraytotal = 17
-arrayunits = 3
+arraytotal = 15
+arrayunits = 2
+potential = 0
 
 firstnumber = list(range(1,10))
 if arrayunits == 1:
     solutions = [arraytotal]
 elif arrayunits == 2:
     for a1 in firstnumber:
-        secondnumber = list(range(a1,10))
-        secondnumber.remove(a1)
+        secondnumber = list(range(a1+1,10))
         for a2 in secondnumber:
             potential = ([a1,a2])
             if sum(potential) == arraytotal:
-                print(potential)
+                solutions = potential
+                print(solutions)
         #solutions = [arraytotal]
 elif arrayunits == 3:
     for a1 in firstnumber:
-        secondnumber = list(range(a1,10))
-        secondnumber.remove(a1)
+        secondnumber = list(range(a1+1,10))
         for a2 in secondnumber:
-            thirdnumber = list(range(a2,10))
-            thirdnumber.remove(a2)
+            thirdnumber = list(range(a2+1,10))
             for a3 in thirdnumber:
                 potential =([a1,a2,a3])
                 if sum(potential) == arraytotal:
                     print(potential)
         #solutions = [arraytotal]
+elif arrayunits == 4:
+    for a1 in firstnumber:
+        secondnumber = list(range(a1+1,10))
+        for a2 in secondnumber:
+            thirdnumber = list(range(a2+1,10))
+            for a3 in thirdnumber:
+                fourthnumber = list(range(a3+1,10))
+                for a4 in fourthnumber:
+                    potential =([a1,a2,a3,a4])
+                    if sum(potential) == arraytotal:
+                        print(potential)
+                        #solutions = [arraytotal]
+elif arrayunits == 5:
+    for a1 in firstnumber:
+        secondnumber = list(range(a1+1,10))
+        for a2 in secondnumber:
+            thirdnumber = list(range(a2+1,10))
+            for a3 in thirdnumber:
+                fourthnumber = list(range(a3+1,10))
+                for a4 in fourthnumber:
+                    fifthnumber = list(range(a4+1,10))
+                    for a5 in fifthnumber:
+                        potential =([a1,a2,a3,a4,a5])
+                        if sum(potential) == arraytotal:
+                            print(potential)
+                            #solutions = [arraytotal]
+elif arrayunits == 6:
+    for a1 in firstnumber:
+        secondnumber = list(range(a1+1,10))
+        for a2 in secondnumber:
+            thirdnumber = list(range(a2+1,10))
+            for a3 in thirdnumber:
+                fourthnumber = list(range(a3+1,10))
+                for a4 in fourthnumber:
+                    fifthnumber = list(range(a4+1,10))
+                    for a5 in fifthnumber:
+                        sixthnumber = list(range(a5+1,10))
+                        for a6 in sixthnumber:
+                            potential =([a1,a2,a3,a4,a5,a6])
+                            if sum(potential) == arraytotal:
+                                print(potential)
+                                #solutions = [arraytotal]
+elif arrayunits == 7:
+    for a1 in firstnumber:
+        secondnumber = list(range(a1+1,10))
+        for a2 in secondnumber:
+            thirdnumber = list(range(a2+1,10))
+            for a3 in thirdnumber:
+                fourthnumber = list(range(a3+1,10))
+                for a4 in fourthnumber:
+                    fifthnumber = list(range(a4+1,10))
+                    for a5 in fifthnumber:
+                        sixthnumber = list(range(a5+1,10))
+                        for a6 in sixthnumber:
+                            seventhnumber = list(range(a6+1,10))
+                            for a7 in thirdnumber:
+                                potential =([a1,a2,a3,a4,a5,a6,a7])
+                                if sum(potential) == arraytotal:
+                                    print(potential)
+                                    #solutions = [arraytotal]
 elif arrayunits == 8:
     toremove = 45 - arraytotal
     solutions = [1,2,3,4,5,6,7,8,9]
@@ -48,4 +107,5 @@ else:
 #Improvements
 # 1 need to remove duplicates e.g. 6,9 and 9,6 - DONE
 # 2 reduce a2 array to avoid duplicate a1 digit - DONE
-# 3 needs to be extend simpler to 4-7 digit arrays
+# 3 needs to be simplified for 3-7 digit arrays
+# 4 needs better error commenting for no available solutions
