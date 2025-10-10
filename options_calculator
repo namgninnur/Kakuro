@@ -13,6 +13,8 @@ arrayunits = 2
 potential = 0
 
 firstnumber = list(range(1,10))
+#potential = (['a'])*arrayunits
+#print(potential)
 if arrayunits == 1:
     solutions = [arraytotal]
 elif arrayunits == 2:
